@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8">
+    <title>CV - Alexandre Pauly</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- JavaScript -->
+    <script src="js/progressBar.js"></script> <!-- Fonctions réagissant au scroll sur la page -->
+
+    <!-- Logo Header -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+<body onload="animateSkills()">
+    <!-- Conteneur de CV pour lui donner un effet de page -->
+    <div id="container">
+        <!-- En-tête du CV -->
+        <header>
+            <div id="header-content">
+                <h1>Alexandre Pauly</h1>
+                <p>Data scientist</p>
+            </div>
+        </header>
+
+        <!-- Corps du CV -->
+        <main>
+            <!-- Corps du CV - Partie gauche -->
+            <section id="leftCol">
+                <!-- Photo du CV -->
+                <div id="picture"></div>
+
+                <!-- Informations personnelles -->
+                <div id="about">
+                    <!-- Objectifs de carrière  -->
+                    <div class="personal-infos">
+                        <h2>Objectifs de carrière</h2>
+
+                        <p id="goal">Etudiant en deuxième année de cycle ingénieur en Génie Mathématiques, j'aspire à acquérir de l'expérience en entreprise avant de lancer mon propre projet dans le domaine de l'informatique et principalement du développement Web et d'application.</p>
+                    </div>
+
+                    <!-- Contact -->
+                    <div class="personal-infos">
+                        <h2>Contact</h2>
+
+                        <!-- Adresse -->
+                        <div>
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <p>23 avenue des Écureuils, 64140 Lons</p>
+                        </div>
+
+                        <!-- Mail -->
+                        <div>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <p>alexandre.pauly@cy-tech.fr</p>
+                        </div>
+
+                        <!-- Numéro de téléphone -->
+                        <div>
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <p>06 49 24 58 34</p>
+                        </div>
+
+                        <!-- Linkedin -->
+                        <div>
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <p>www.linkedin.com/in/pauly-alexandre</p>
+                        </div>
+
+                        <!-- Github -->
+                        <div>
+                            <i class="fa fa-github-square" aria-hidden="true"></i>
+                            <p>www.github.com/AlexandrePauly</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Langues -->
+                    <div class="personal-infos language">
+                        <h2>Langues</h2>
+
+                        <div>
+                            <p>Anglais</p>
+                            <span class="content-percent"><p style="width: 60%;"></p></span>
+                        </div>
+                        <div>
+                            <p>Espagnol</p>
+                            <span class="content-percent"><p style="width: 50%;"></p></span>
+                        </div>
+                    </div>
+
+                    <!-- Savoir-être -->
+                    <div class="personal-infos soft-skills">
+                        <h2>Savoir-être</h2>
+
+                        <div>
+                            <p>Autonomie</p>
+                        </div>
+                        <div>
+                            <p>Créativité</p>
+                        </div>
+                        <div>
+                            <p>Esprit d'équipe et calme</p>
+                        </div>
+                        <div>
+                            <p>Capacité d'organisation et bonne résistance aux stress</p>
+                        </div>
+                        <div>
+                            <p>Organisé et méticuleux</p>
+                        </div>
+                    </div>
+
+                    <!-- Formations et certifications -->
+                    <div class="personal-infos">
+                        <h2>Formations et certifications</h2>
+
+                        <div>
+                            <i class="fa fa-car" aria-hidden="true"></i>
+                            <p>Permis B</p>
+                        </div>
+                        <div>
+                            <i class="fa fa-certificate" aria-hidden="true"></i>
+                            <p>Projet Voltaire</p>
+                        </div>
+                    </div>
+
+                    <!-- Intérêts -->
+                    <div class="personal-infos">
+                        <h2>Intérêts</h2>
+                        
+                        <div id="interest">
+                            <div>
+                                <i class="fa fa-code" aria-hidden="true"></i>
+                                <p>Code</p>
+                            </div>
+
+                            <div>
+                                <i class="fa fa-book" aria-hidden="true"></i>
+                                <p>Lecture</p>
+                            </div>
+
+                            <div>
+                                <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                <p>Cuisine</p>
+                            </div>
+
+                            <div>
+                                <i class="fa fa-plane" aria-hidden="true"></i>
+                                <p>Voyages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Corps du CV - Partie droite -->
+            <aside id="rightCol">
+
+                <!-- Formation -->
+                <div class="professional-infos">
+                    <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i>Formation</h2>
+
+                    <!-- Liste des formations -->
+                    <ul>
+                        <!-- CyTech -->
+                        <li>
+                            <div class="content">
+                                <span>Septembre 2022 - Mai 2024 | Cy Tech</span>
+                                <h3>2ème année en cycle ingénieur Génie Mathématiques</h3>
+                                <p>Parcours bi-disciplinaire reposant sur la mise en œuvre des méthodes mathématiques et des algorithmes en particulier pour l’optimisation des processus ou la recherche de l’information dans les données.</p>
+                            </div>
+                        </li>
+
+                        <!-- UPPA -->
+                        <li>
+                            <div class="content">
+                                <span>Septembre 2019 - Mai 2022 | Université de Pau et des Pays de l'Adour</span>
+                                <h3>Licence MIASHS (Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales)</h3>
+                                <p>Licence pluridisciplinaire qui s'appuie sur des compétences croisées en mathématiques appliquées, probabilités-statistique et informatique d'une part et en sciences sociales(économie, gestion, droit) d’autre part.</p>
+                            </div>
+                        </li>
+
+                        <!-- Baccalauréat ES -->
+                        <li>
+                            <div class="content">
+                                <span>Septembre 2017 - Mai 2018 | Lycée Maine de Biran, Bergerac</span>
+                                <h3>Baccalauréat Économique et Sociale</h3>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Expérience professionnelle -->
+                <div class="professional-infos">
+                    <h2><i class="fa fa-briefcase" aria-hidden="true"></i>Expérience professionnelle</h2>
+
+                    <!-- Liste des expériences professionnelles -->
+                    <ul>
+                        <!-- Stage Marine Nationale -->
+                        <li>
+                            <div class="content">
+                                <span>Juin 2023 - Août 2023 | Marine Nationale</span>
+                                <h3>Stage de 1ère année au Laboratoire Numérique Ceclant</h3>
+                                <p>Développement d'applications en Angular et Node.js</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Projets -->
+                <div class="professional-infos">
+                    <h2><i class="fa fa-code" aria-hidden="true"></i>Projets</h2>
+
+                    <!-- Liste des projets -->
+                    <ul>
+                        <li>
+                            <div class="content">
+                                <span>Mai 2023 | Projet scolaire - Cy Tech</span>
+                                <h3>Débruitage d'images par ACP</h3>
+                                <p>Réalisé en Java (JavaFX pour les interfaces)</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="content">
+                                <span>Mars 2023 - Mai 2023 | Projet scolaire - Cy Tech</span>
+                                <h3>Site Web E-commerce</h3>
+                                <p>Réalisé en HTML5, CSS, JavaScript et PHP</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="content">
+                                <span>Mars 2023 - Mai 2023 | Projet scolaire - Cy Tech</span>
+                                <h3>Gestion d'un centre de tri</h3>
+                                <p>Réalisé en Java (JavaFX pour les interfaces)</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Compétences -->
+                <div class="professional-infos skills">
+                    <h2><i class="fa fa-pencil" aria-hidden="true"></i>Compétences</h2>
+
+                    <h4>Back-end</h4>
+                    <div>
+                        <p>PHP</p>
+                        <span class="content-percent"><p class=percent style="width: 70%;"></p></span>
+                    </div>
+
+                    <div>
+                        <p>NodeJS</p>
+                        <span class="content-percent"><p class=percent style="width: 60%;"></p></span>
+                    </div>
+
+                    <div>
+                        <p>SQL / MySQL / Sequelize / Access</p>
+                        <span class="content-percent"><p class=percent style="width: 94%;"></p></span>
+                    </div>
+
+                    <h4>Front-end</h4>
+                    <div>
+                        <p>HTML</p>
+                        <span class="content-percent"><p class=percent style="width: 95%;"></p></span>
+                    </div>
+
+                    <div>
+                        <p>CSS</p>
+                        <span class="content-percent"><p class=percent style="width: 90%;"></p></span>
+                    </div>
+
+                    <div>
+                        <p>JS / TypeScript</p>
+                        <span class="content-percent"><p class=percent style="width: 75%;"></p></span>
+                    </div>
+
+                    <h4>CMS</h4>
+                    <div>
+                        <p>WordPress</p>
+                        <span class="content-percent"><p class=percent style="width: 80%;"></p></span>
+                    </div>
+
+                    <h4>Divers</h4>
+                    <div>
+                        <p>C, C++, Java</p>
+                        <span class="content-percent"><p class="percent" style="width: 85%;"></p></span>
+                    </div>
+
+                    <div>
+                        <p>Python</p>
+                        <span class="content-percent"><p class=percent style="width: 55%;"></p></span>
+                    </div>
+
+                    <div>
+                        <p>Angular</p>
+                        <span class="content-percent"><p class=percent style="width: 87%;"></p></span>
+                    </div>
+
+                    <div>
+                        <p>Windows / Linux</p>
+                        <span class="content-percent"><p class=percent style="width: 80%;"></p></span>
+                    </div>
+                </div>
+            </aside>
+        </main>                  
+
+        <!-- Bas de page du CV -->
+        <footer></footer>
+    </div>
+</body>
+</html>

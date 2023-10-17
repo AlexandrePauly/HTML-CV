@@ -1,0 +1,292 @@
+:root{
+    /*-- Couleur du fond de la page --*/
+    --fontPage: rgba(26, 46, 104, 0.5);
+    --CVShadow: rgba(0,0,0,1);
+
+    /*-- Couleurs du CV --*/
+    --mainColor: #2D3C56;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: var(--fontPage);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px 20px;
+}
+
+/* Conteneur de CV pour lui donner un effet de page */
+#container{
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    box-shadow: 0 35px 55px var(--CVShadow);
+}
+
+/* -- En-tête du CV -- */
+
+header{
+    background-color: var(--mainColor);
+    height: 150px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header-content{
+    margin-left: calc(100% / 2);
+    margin-right: auto;
+}
+
+/* -- Corps du CV -- */
+
+main{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background-color: white;
+}
+
+/* -- Corps du CV - Partie gauche -- */
+
+#leftCol{
+    padding-right: 20px;
+    border-right: 3px solid #2D3C56;
+    background-color: white;
+}
+
+/* Photo du CV */
+#picture{
+    left: 25%;
+    top: -100px;
+    position: relative;
+    height: 200px;
+    width: 200px;
+    border: 10px solid white;
+    border-radius: 100%;
+    background-image: url(../img/pp.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* -- Informations personnelles -- */
+
+#about{
+    position: relative;
+    top: -90px;
+}
+
+/* Styles commun à toutes les infos personnelles */
+.personal-infos:last-of-type{
+    margin-bottom: 0;
+}
+
+.professional-infos:last-of-type{
+    margin-bottom: 0;
+}
+
+.personal-infos h2{
+    padding: 10px 0 10px 0;
+    margin: 20px 0 20px 0;
+    background-color: #2D3C56;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    font-size: 20px;
+}
+
+.personal-infos div{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    flex-direction: row;
+    justify-content: left;
+    margin: auto 30px 20px 30px;
+}
+
+.personal-infos i{
+    color: var(--mainColor);
+    display: flex;
+    justify-content: center;
+    font-size: 120%;
+}
+
+/* Objectifs de carrière  */
+#goal{
+    text-align: justify;
+    margin: auto 30px auto 30px;
+}
+
+/* Langues */
+.language div{
+    grid-template-columns: 80px 1fr;
+}
+
+/* Pourcentages */
+.content-percent {
+    width: 100%;
+    height: 8px;
+    border: 1px solid var(--mainColor);
+    border-radius: 10px;
+    display: flex;
+    margin: auto;
+}
+
+.content-percent p {
+    height: 100%;
+    background-color: var(--mainColor);
+}
+
+/* Savoir-être */
+.soft-skills div{
+    display: flex;
+}
+
+/* Intérêts */
+#interest{
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* -- Corps du CV - Partie droite -- */
+
+#rightCol{
+    padding-left: 20px;
+}
+
+/* Styles commun à toutes les infos professionnelles */
+.professional-infos h2{
+    padding: 10px 0 10px 20px;
+    margin: 20px 0 20px 0;
+    background-color: #2D3C56;
+    color: white;
+    display: flex;
+    justify-content: left;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    font-size: 20px;
+}
+
+.professional-infos h2>i{
+    display: flex;
+    margin: auto 20px auto;
+}
+
+.professional-infos ul{
+    margin: auto 30px 5px 30px;
+}
+
+.professional-infos li{
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+
+/* Styles commun pour le contenu des formations, expériences professionnelles et projets*/
+.content>*{
+    line-height: 22px;
+}
+
+.content span{
+    font-size: 110%;
+    color:#2d3c568e;
+}
+
+/* Compétences */
+.skills{
+    padding-bottom: 20px;
+}
+.skills h4{
+    margin-left: 10px;
+}
+
+.skills h4:last-of-type{
+    margin-top: 20px;
+}
+
+.skills p{
+    font-size: 14px;
+}
+
+.skills div{
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    flex-direction: row;
+    justify-content: left;
+    margin: 10px 30px 10px 30px;
+}
+
+/* -- Bas de page du CV -- */
+
+footer{
+    height: 70px;
+    background-color: var(--mainColor);
+}
+
+/* Partie responsive du CV */
+@media screen and (max-width: 900px)
+{
+    /* -- En-tête du CV -- */
+
+    header{
+        justify-content: center;
+        padding: 30px;
+    }
+
+    #header-content{
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    /* -- Corps du CV -- */
+
+    main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* -- Corps du CV - Partie gauche -- */
+
+    #leftCol{
+        border-right: none;
+        border-bottom: 3px solid #2D3C56;
+        padding-bottom: 20px;
+    }
+
+    /* -- Informations personnelles -- */
+
+    #about{
+        top: 0;
+    }
+
+    /* Photo du CV */
+    #picture{
+        left: 0;
+        top: 0;
+        margin: auto;
+    }
+
+    #interest{
+        margin: auto 10% auto 10%;
+    }
+
+    /* -- Corps du CV - Partie droite -- */
+
+    #rightCol{
+        padding-bottom: 20px;
+    }
+}
+
