@@ -12,13 +12,9 @@ Ce projet est un CV réalisé en utilisant les langages HTML, CSS et JavaScript.
 2. Assurez-vous d'avoir une connexion Internet active pour charger les dépendances externes.
 3. Ouvrez le fichier `index.html` dans votre navigateur web.
 
-## Personnalisation
+## Résultat
 
-Si vous souhaitez personnaliser le CV, vous pouvez effectuer les modifications suivantes :
-
-- Dans le fichier `index.html`, vous pouvez modifier la structure HTML du formulaire en ajoutant, modifiant ou supprimant des éléments.
-- Dans le fichier `style.css`, vous pouvez personnaliser l'apparence du formulaire en modifiant les styles CSS.
-- Dans le fichier `progressBar.js`, gérez l'animation des barres de pourcentage du document.
+<img width="549" height="770" alt="image" src="https://github.com/user-attachments/assets/deaea2fc-455a-4613-94d8-43e6e7e385a0" />
 
 ## Auteur
 
